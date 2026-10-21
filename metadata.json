@@ -1,0 +1,6 @@
+{
+  "name": "Kurukshetra Dog Food & Pet Products",
+  "description": "Healthy puppies, honest dog food, and pet supplies in Thanesar, Kurukshetra, Haryana. WhatsApp enquiries, local delivery, and ethical pet care.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

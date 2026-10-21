@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurukshetra Dog Food & Pet Products | Healthy Puppies & Pet Supplies in Thanesar</title>
+    <meta name="description" content="Healthy puppies (German Shepherd, Labrador), honest dog food, treats, accessories & grooming supplies in Thanesar, Kurukshetra, Haryana. WhatsApp enquiry, store visit & local delivery." />
+    <meta name="keywords" content="dog food Kurukshetra, puppy in Thanesar, German Shepherd Kurukshetra, Labrador puppy Haryana, pet shop Thanesar, dog food price Kurukshetra, HR Pets" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kurukshetra Dog Food & Pet Products | Thanesar, Haryana" />
+    <meta property="og:description" content="Healthy puppies, honest dog food, and pet supplies in Thanesar, Kurukshetra. Instant WhatsApp enquiries and local delivery." />
+    <meta property="og:image" content="/images/og-share.jpg" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kurukshetra Dog Food & Pet Products | Thanesar" />
+    <meta name="twitter:description" content="Healthy puppies, honest dog food, and pet supplies in Thanesar, Kurukshetra." />
+    
+    <!-- Google Fonts: Fraunces, Manrope, Noto Sans Devanagari -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600..700;1,9..144,600&family=Manrope:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B5533C'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>" />
+
+    <!-- JSON-LD LocalBusiness / PetStore Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PetStore",
+      "name": "Kurukshetra Dog Food & Pet Products",
+      "alternateName": ["HR Pets", "Kurukshetra Kennel"],
+      "description": "Healthy puppies, honest dog food, accessories and grooming supplies in Thanesar, Kurukshetra, Haryana.",
+      "telephone": "+91 98960 00000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Near Pipli Road / Main Market [PLACEHOLDER]",
+        "addressLocality": "Thanesar",
+        "addressRegion": "Haryana",
+        "postalCode": "136118",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.9695,
+        "longitude": 76.8783
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:30",
+          "closes": "20:30"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/kurukshetrakennel",
+        "https://www.youtube.com/@kurukshetrapets"
+      ],
+      "priceRange": "₹₹"
+    }
+    </script>
+
+    <!-- PWA Manifest & Theme -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#1F3A2E" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  </head>
+  <body class="bg-[#F6EFE4] text-[#14181A] antialiased selection:bg-[#B5533C]/20 selection:text-[#14181A]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,64 @@
+[
+  {
+    "id": "pup-gsd-01",
+    "breed": "German Shepherd",
+    "coat": "Long Coat",
+    "gender": "Male",
+    "ageWeeks": 9,
+    "status": "Available",
+    "price": null,
+    "vaccinationNote": "[PLACEHOLDER: 7-in-1 Primary Vaccine administered at 7 weeks, dewormed twice by licensed local veterinarian]",
+    "images": [
+      "/images/puppy_german_shepherd.jpg",
+      "/images/hero_kurukshetra_pet_store.jpg"
+    ],
+    "videoPoster": "/images/puppy_german_shepherd.jpg",
+    "parentsNote": "Sire: Heavy bone structure, calm family temperament. Dam: Active, loyal guardian. Both parents available for in-person meeting at our kennel."
+  },
+  {
+    "id": "pup-lab-02",
+    "breed": "Labrador Retriever",
+    "coat": "Golden Short Coat",
+    "gender": "Female",
+    "ageWeeks": 8,
+    "status": "Available",
+    "price": null,
+    "vaccinationNote": "[PLACEHOLDER: Age-appropriate vaccination card initiated, dewormed on schedule]",
+    "images": [
+      "/images/puppy_labrador_golden.jpg",
+      "/images/hero_kurukshetra_pet_store.jpg"
+    ],
+    "videoPoster": "/images/puppy_labrador_golden.jpg",
+    "parentsNote": "Gentle, food-motivated parents with exceptional family socialization. Ideal for households with children."
+  },
+  {
+    "id": "pup-gsd-03",
+    "breed": "German Shepherd",
+    "coat": "Double Coat (Standard)",
+    "gender": "Female",
+    "ageWeeks": 8,
+    "status": "Reserved",
+    "price": null,
+    "vaccinationNote": "[PLACEHOLDER: Primary DHPPi vaccination completed, veterinary health check certified]",
+    "images": [
+      "/images/puppy_german_shepherd.jpg"
+    ],
+    "videoPoster": "/images/puppy_german_shepherd.jpg",
+    "parentsNote": "Alert, inquisitive, and highly trainable line. Currently reserved for a family in Karnal."
+  },
+  {
+    "id": "pup-mastiff-04",
+    "breed": "Mastiff Type",
+    "coat": "Short Fawn Coat",
+    "gender": "Male",
+    "ageWeeks": 10,
+    "status": "Available",
+    "price": null,
+    "vaccinationNote": "[PLACEHOLDER: Primary 7-in-1 vaccination completed, microchip ready upon buyer request]",
+    "images": [
+      "/images/hero_kurukshetra_pet_store.jpg"
+    ],
+    "videoPoster": "/images/hero_kurukshetra_pet_store.jpg",
+    "parentsNote": "Broad chest, calm guardian temperament. Requires experienced handler and ample space for adult exercise."
+  }
+]

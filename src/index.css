@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brick: #B5533C;
+    --brick-dark: #973F2B;
+    --cream: #F6EFE4;
+    --cream-surface: #FFFFFF;
+    --forest: #1F3A2E;
+    --forest-dark: #15271F;
+    --charcoal: #14181A;
+    --charcoal-light: #252D30;
+    --amber: #E8A33D;
+    --amber-hover: #D5912F;
+    
+    --bg-page: #F6EFE4;
+    --bg-card: #FFFFFF;
+    --text-primary: #14181A;
+    --text-muted: #5E696E;
+    --border-subtle: rgba(20, 24, 26, 0.08);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-page: #14181A;
+      --bg-card: #1D2326;
+      --text-primary: #F6EFE4;
+      --text-muted: #A2ADB3;
+      --border-subtle: rgba(246, 239, 228, 0.12);
+    }
+  }
+
+  body {
+    font-family: 'Manrope', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Fraunces', 'Noto Sans Devanagari', Georgia, serif;
+    font-feature-settings: 'salt', 'ss01';
+  }
+}
+
+/* Subtle Charpai Woven Pattern Texture (< 4% opacity) */
+.bg-charpai-pattern {
+  background-image: radial-gradient(rgba(181, 83, 60, 0.035) 1px, transparent 1px),
+                    radial-gradient(rgba(31, 58, 46, 0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Subtle Paw Print Pattern (< 3.5% opacity) */
+.bg-paw-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 18c-2.2 0-4 1.5-4 3.3 0 1.9 1.8 3.4 4 3.4s4-1.5 4-3.4c0-1.8-1.8-3.3-4-3.3zm-4.5-3.5c1 0 1.8-1.1 1.8-2.5s-.8-2.5-1.8-2.5-1.8 1.1-1.8 2.5.8 2.5 1.8 2.5zm9 0c1 0 1.8-1.1 1.8-2.5s-.8-2.5-1.8-2.5-1.8 1.1-1.8 2.5.8 2.5 1.8 2.5zm-11 5c1 0 1.8-1.1 1.8-2.5s-.8-2.5-1.8-2.5-1.8 1.1-1.8 2.5.8 2.5 1.8 2.5zm13 0c1 0 1.8-1.1 1.8-2.5s-.8-2.5-1.8-2.5-1.8 1.1-1.8 2.5.8 2.5 1.8 2.5z' fill='%231F3A2E' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
