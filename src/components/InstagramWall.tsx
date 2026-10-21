@@ -13,57 +13,57 @@ export const InstagramWall: React.FC = () => {
   const posts: PostThumbnail[] = [
     {
       id: 1,
-      image: "/images/puppy_german_shepherd.jpg",
-      caption: "8-week-old long coat German Shepherd puppy at morning play in Kurukshetra",
-      likes: "428"
+      image: "/images/hero_pet_supplies_store.jpg",
+      caption: "Freshly restocked premium dry kibble and nutrition aisles at our Thanesar store counter",
+      likes: "482"
     },
     {
       id: 2,
-      image: "/images/puppy_labrador_golden.jpg",
-      caption: "Golden Lab pup discovering grass in the shaded outdoor kennel run",
-      likes: "512"
+      image: "/images/products/cat_whiskas_ocean_fish.jpg",
+      caption: "Feline nutrition restock: Whiskas Ocean fish and Sheba tender chicken gravy pouches in store",
+      likes: "518"
     },
     {
       id: 3,
-      image: "/images/hero_kurukshetra_pet_store.jpg",
-      caption: "Afternoon rest on the traditional charpai cot. Rural Haryana vibes",
-      likes: "689"
+      image: "/images/products/dog_orthopedic_bed.jpg",
+      caption: "Luxury orthopedic memory foam dog beds now available in Large & XL sizes",
+      likes: "614"
     },
     {
       id: 4,
-      image: "/images/about_kennel_kurukshetra.jpg",
-      caption: "Clean, open-air kennel compound under mature neem shade",
-      likes: "374"
+      image: "/images/products/dog_harness_leash_set.jpg",
+      caption: "Reflective no-pull padded walking harnesses fitted for local Kurukshetra dogs",
+      likes: "392"
     },
     {
       id: 5,
-      image: "/images/dog_food_bag_premium.jpg",
-      caption: "Fresh stock of high-protein puppy food arrived at our Thanesar store counter",
-      likes: "295"
+      image: "/images/products/dog_dental_treats_chew.jpg",
+      caption: "Healthy dental chews and roasted real meat jerky snacks for daily training",
+      likes: "345"
     },
     {
       id: 6,
-      image: "/images/puppy_german_shepherd.jpg",
-      caption: "Dewormed and certified vet check completed for this bundle of joy",
-      likes: "441"
+      image: "/images/products/bird_food_seed_mix.jpg",
+      caption: "Clean gourmet triple-cleaned seed mixes for budgies, lovebirds, and cockatiels",
+      likes: "288"
     },
     {
       id: 7,
-      image: "/images/puppy_labrador_golden.jpg",
-      caption: "Healthy coat and clear eyes: the result of wholesome maternal nutrition",
-      likes: "389"
+      image: "/images/products/fish_food_aquarium_flakes.jpg",
+      caption: "Aqua-Vital color-enhancing tropical fish flakes for crystal clear aquarium water",
+      likes: "310"
     },
     {
       id: 8,
-      image: "/images/about_kennel_kurukshetra.jpg",
-      caption: "Evening exercise run for our adult guardian German Shepherds",
-      likes: "620"
+      image: "/images/products/cat_litter_clumping.jpg",
+      caption: "Instant clumping odor-lock bentonite cat litter with soothing lavender scent",
+      likes: "420"
     },
     {
       id: 9,
-      image: "/images/hero_kurukshetra_pet_store.jpg",
-      caption: "Meet the proud dam and sire on your weekend visit to Kurukshetra",
-      likes: "530"
+      image: "/images/products/small_pet_rabbit_food.jpg",
+      caption: "Fragrant sun-cured timothy grass hay and botanical pellets for rabbits and guinea pigs",
+      likes: "275"
     }
   ];
 
@@ -76,13 +76,13 @@ export const InstagramWall: React.FC = () => {
           <div>
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#B5533C] mb-1">
               <Instagram className="w-4 h-4" />
-              <span>{siteConfig.instagramHandle} · 4.6K+ Community</span>
+              <span>{siteConfig.instagramHandle} · Community of Pet Parents</span>
             </div>
             <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#14181A] dark:text-[#F6EFE4]">
-              Daily Life at Our Kennel & Store
+              Daily Updates from Our Store & Happy Pets
             </h2>
             <p className="text-xs sm:text-sm text-[#5E696E] dark:text-[#A2ADB3] mt-1">
-              Real unfiltered photos from our Kurukshetra kennel and Thanesar store counter.
+              Real product arrivals, pet care advice, and customer highlights in Kurukshetra.
             </p>
           </div>
 
@@ -116,7 +116,6 @@ export const InstagramWall: React.FC = () => {
                 loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              {/* Overlay with caption on hover/touch */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-3 sm:p-4 flex flex-col justify-end text-white">
                 <p className="text-xs line-clamp-2 font-medium">
                   {post.caption}

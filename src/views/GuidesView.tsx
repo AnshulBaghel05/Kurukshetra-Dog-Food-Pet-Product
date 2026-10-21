@@ -9,7 +9,7 @@ export const GuidesView: React.FC = () => {
   const [selectedArticle, setSelectedArticle] = useState<GuideArticle | null>(null);
 
   const handleShareArticle = (art: GuideArticle) => {
-    const text = `Read this helpful pet guide from Kurukshetra Dog Food: "${art.title}"`;
+    const text = `Read this helpful pet care guide from Kurukshetra Pet Food & Supplies: "${art.title}"`;
     const url = buildWhatsAppUrl(text);
     window.open(url, '_blank', 'noopener,noreferrer');
   };

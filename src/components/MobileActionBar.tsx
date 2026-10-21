@@ -8,7 +8,7 @@ export const MobileActionBar: React.FC = () => {
   const { t } = useLanguage();
 
   const whatsappLink = buildWhatsAppUrl(
-    "Namaste HR Pets! I am visiting your website and have an enquiry regarding dog food / puppy availability in Thanesar."
+    "Namaste HR Pets! I am visiting your website and would like to enquire about pet food and supplies in Thanesar."
   );
 
   return (

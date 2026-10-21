@@ -23,51 +23,45 @@ export function generateCartWhatsAppMessage(params: {
 }): string {
   const { items, fulfillment, customerName, customerArea } = params;
 
-  let msg = `*Namaste HR Pets / Kurukshetra Dog Food!* 🐾\n`;
-  msg += `I would like to enquire / order the following items:\n\n`;
+  let msg = `*Namaste Kurukshetra Pet Store!* 🐾\n`;
+  msg += `I would like to place an order for the following pet supplies:\n\n`;
 
-  let knownTotal = 0;
+  let totalAmount = 0;
   let hasNullPrice = false;
 
   items.forEach((item, idx) => {
-    const priceText = item.price !== null ? `₹${item.price * item.quantity}` : `[Ask price]`;
+    const itemTotal = item.price !== null ? `₹${item.price * item.quantity}` : `[Ask price]`;
     if (item.price !== null) {
-      knownTotal += item.price * item.quantity;
+      totalAmount += item.price * item.quantity;
     } else {
       hasNullPrice = true;
     }
-    msg += `${idx + 1}. *${item.quantity}x ${item.name}* (${item.packSize}) — ${priceText}\n`;
+    msg += `${idx + 1}. *${item.quantity}x ${item.name}* (${item.packSize}) — ${itemTotal}\n`;
   });
 
   msg += `\n*Total Items:* ${items.reduce((acc, curr) => acc + curr.quantity, 0)}`;
-  if (!hasNullPrice && knownTotal > 0) {
-    msg += `\n*Estimated Total:* ₹${knownTotal}`;
+  if (!hasNullPrice && totalAmount > 0) {
+    msg += `\n*Order Total:* ₹${totalAmount}`;
   } else {
-    msg += `\n*Total:* Please confirm item availability and prices`;
+    msg += `\n*Total:* Please confirm item availability and final total`;
   }
 
-  msg += `\n*Fulfillment:* ${fulfillment === 'delivery' ? 'Home Delivery (Kurukshetra Area)' : 'Store Pickup (Thanesar)'}`;
+  msg += `\n*Fulfillment Mode:* ${fulfillment === 'delivery' ? 'Same-Day Home Delivery (Kurukshetra Area)' : 'Store Pickup (Thanesar Counter)'}`;
   if (customerName) {
-    msg += `\n*Name:* ${customerName}`;
+    msg += `\n*Customer Name:* ${customerName}`;
   }
   if (customerArea) {
-    msg += `\n*Area / Colony:* ${customerArea}`;
+    msg += `\n*Delivery Address / Area:* ${customerArea}`;
   }
 
-  msg += `\n\nPlease let me know availability and delivery timing. Thank you!`;
+  msg += `\n\nPlease confirm availability and delivery dispatch time. Thank you!`;
   return msg;
 }
 
-export function generatePuppyEnquiryMessage(puppy: {
-  id: string;
-  breed: string;
-  coat: string;
-  gender: string;
-  ageWeeks: number;
-}): string {
-  return `*Namaste HR Pets!* 🐾\nI am interested in visiting the kennel to see the puppy:\n- *Breed:* ${puppy.breed} (${puppy.coat})\n- *Gender:* ${puppy.gender}\n- *Age:* ${puppy.ageWeeks} weeks\n- *Puppy ID:* ${puppy.id}\n\nCould you please share parent details, vaccination record card, and visiting hours for the Kurukshetra kennel? Thank you!`;
+export function generateCategoryEnquiryMessage(categoryName: string): string {
+  return `*Namaste Kurukshetra Pet Store!* 🐾\nI am browsing your catalog for *${categoryName}*. Could you please let me know what brands and pack sizes you currently have in stock at your Thanesar store?`;
 }
 
 export function generateProductEnquiryMessage(productName: string, packSize: string): string {
-  return `*Namaste!* I would like to check price and availability for *${productName}* (${packSize}) at your Thanesar store. Do you have this in stock?`;
+  return `*Namaste!* I would like to order or check availability for *${productName}* (${packSize}) at your Thanesar store. Do you have this in stock for immediate delivery / pickup?`;
 }

@@ -3,13 +3,13 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 interface EntryCardsProps {
-  onSelectPuppies: () => void;
-  onSelectProducts: () => void;
+  onSelectDog: () => void;
+  onSelectCat: () => void;
 }
 
 export const EntryCards: React.FC<EntryCardsProps> = ({
-  onSelectPuppies,
-  onSelectProducts,
+  onSelectDog,
+  onSelectCat,
 }) => {
   const { t } = useLanguage();
 
@@ -18,35 +18,35 @@ export const EntryCards: React.FC<EntryCardsProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           
-          {/* Card 1: Find a Puppy */}
+          {/* Card 1: Dog Food & Supplies */}
           <div
-            onClick={onSelectPuppies}
+            onClick={onSelectDog}
             className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-[#14181A]/10 dark:border-[#F6EFE4]/10 bg-[#F6EFE4] dark:bg-[#1D2326] p-6 sm:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300 cursor-pointer"
           >
             <div className="space-y-3 z-10">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#B5533C]">
-                Kurukshetra Kennel
+                For Dogs & Puppies
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#14181A] dark:text-[#F6EFE4]">
-                {t.entryCards.findPuppyTitle}
+                {t.entryCards.dogTitle}
               </h2>
               <p className="text-sm sm:text-base text-[#5E696E] dark:text-[#A2ADB3] max-w-md leading-relaxed">
-                {t.entryCards.findPuppyDesc}
+                {t.entryCards.dogDesc}
               </p>
             </div>
 
             <div className="pt-6 z-10 flex items-center justify-between">
               <span className="inline-flex items-center gap-2 text-sm font-bold text-[#B5533C] group-hover:translate-x-1 transition-transform">
-                <span>{t.entryCards.findPuppyCta}</span>
+                <span>{t.entryCards.dogCta}</span>
                 <ArrowRight className="w-4 h-4" />
               </span>
             </div>
 
-            {/* Subtle background image decoration */}
-            <div className="absolute -bottom-6 -right-6 w-44 h-44 sm:w-56 sm:h-56 rounded-full overflow-hidden opacity-30 dark:opacity-20 group-hover:scale-105 transition-transform duration-500 pointer-events-none">
+            {/* Product image decoration */}
+            <div className="absolute -bottom-6 -right-6 w-44 h-44 sm:w-56 sm:h-56 rounded-full overflow-hidden opacity-35 dark:opacity-25 group-hover:scale-105 transition-transform duration-500 pointer-events-none">
               <img
-                src="/images/puppy_german_shepherd.jpg"
-                alt="Puppy"
+                src="/images/products/dog_food_bag_premium.jpg"
+                alt="Dog Food & Supplies"
                 width={250}
                 height={250}
                 className="w-full h-full object-cover"
@@ -54,35 +54,35 @@ export const EntryCards: React.FC<EntryCardsProps> = ({
             </div>
           </div>
 
-          {/* Card 2: Shop Food & Supplies */}
+          {/* Card 2: Cat Food & Supplies */}
           <div
-            onClick={onSelectProducts}
+            onClick={onSelectCat}
             className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-[#14181A]/10 dark:border-[#F6EFE4]/10 bg-[#F6EFE4] dark:bg-[#1D2326] p-6 sm:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300 cursor-pointer"
           >
             <div className="space-y-3 z-10">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#1F3A2E] dark:text-emerald-400">
-                Thanesar Pet Store
+                For Cats & Kittens
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#14181A] dark:text-[#F6EFE4]">
-                {t.entryCards.shopProductsTitle}
+                {t.entryCards.catTitle}
               </h2>
               <p className="text-sm sm:text-base text-[#5E696E] dark:text-[#A2ADB3] max-w-md leading-relaxed">
-                {t.entryCards.shopProductsDesc}
+                {t.entryCards.catDesc}
               </p>
             </div>
 
             <div className="pt-6 z-10 flex items-center justify-between">
               <span className="inline-flex items-center gap-2 text-sm font-bold text-[#1F3A2E] dark:text-emerald-400 group-hover:translate-x-1 transition-transform">
-                <span>{t.entryCards.shopProductsCta}</span>
+                <span>{t.entryCards.catCta}</span>
                 <ArrowRight className="w-4 h-4" />
               </span>
             </div>
 
-            {/* Subtle background image decoration */}
-            <div className="absolute -bottom-6 -right-6 w-44 h-44 sm:w-56 sm:h-56 rounded-full overflow-hidden opacity-30 dark:opacity-20 group-hover:scale-105 transition-transform duration-500 pointer-events-none">
+            {/* Product image decoration */}
+            <div className="absolute -bottom-6 -right-6 w-44 h-44 sm:w-56 sm:h-56 rounded-full overflow-hidden opacity-35 dark:opacity-25 group-hover:scale-105 transition-transform duration-500 pointer-events-none">
               <img
-                src="/images/dog_food_bag_premium.jpg"
-                alt="Dog Food"
+                src="/images/products/cat_whiskas_ocean_fish.jpg"
+                alt="Cat Food & Supplies"
                 width={250}
                 height={250}
                 className="w-full h-full object-cover"

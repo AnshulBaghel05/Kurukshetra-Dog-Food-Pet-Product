@@ -11,17 +11,17 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ currentTab }
   const getContextMessage = () => {
     switch (currentTab) {
       case 'products':
-        return `Namaste HR Pets! I am browsing your dog food and products price list for Thanesar. Can you assist me with available brands and delivery?`;
-      case 'puppies':
-        return `Namaste HR Pets! I am looking at your available puppies in Kurukshetra. Could you share current availability and kennel visiting hours?`;
+        return `Namaste HR Pets Store! I am browsing your pet food and products catalog for Thanesar. Can you assist me with prices and same-day delivery?`;
+      case 'categories':
+        return `Namaste HR Pets Store! I am looking for food and supplies for my pet in Kurukshetra. Could you share what options you currently have in stock?`;
       case 'about':
-        return `Namaste! I read about your ethical kennel in Kurukshetra. I'd love to learn more about your dogs and care philosophy.`;
+        return `Namaste! I read about your pet store in Kurukshetra. I would like to visit or order authentic pet food.`;
       case 'guides':
-        return `Namaste! I was reading your pet care guides and had a quick question regarding dog food in Haryana.`;
+        return `Namaste! I was reading your pet nutrition guides and had a question regarding dietary requirements in Haryana.`;
       case 'contact':
-        return `Namaste! I am reaching out to visit your Thanesar store or schedule a kennel walkthrough.`;
+        return `Namaste! I am reaching out to visit your Thanesar store or order pet supplies for local delivery.`;
       default:
-        return `Namaste HR Pets! I am on your website and would like to enquire about products / puppies in Thanesar, Kurukshetra.`;
+        return `Namaste HR Pets Store! I am on your website and would like to enquire about pet food and supplies in Thanesar, Kurukshetra.`;
     }
   };
 

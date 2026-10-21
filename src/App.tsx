@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { LanguageProvider, useLanguage } from './context/LanguageContext';
+import { LanguageProvider } from './context/LanguageContext';
 import { CartProvider } from './context/CartContext';
 import { Navbar } from './components/Navbar';
 import { MobileActionBar } from './components/MobileActionBar';
@@ -8,24 +8,22 @@ import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { Footer } from './components/Footer';
 import { HomeView } from './views/HomeView';
 import { ProductsView } from './views/ProductsView';
-import { PuppiesView } from './views/PuppiesView';
+import { CategoriesView } from './views/CategoriesView';
 import { AboutView } from './views/AboutView';
 import { GuidesView } from './views/GuidesView';
 import { ContactView } from './views/ContactView';
 import { siteConfig } from './config/site';
 
 function MainApp() {
-  const { lang } = useLanguage();
-
   // Read initial route from URL hash or path
   const getInitialTab = (): string => {
     try {
       const hash = window.location.hash.replace('#', '');
-      if (['products', 'puppies', 'about', 'guides', 'contact'].includes(hash)) {
+      if (['products', 'categories', 'about', 'guides', 'contact'].includes(hash)) {
         return hash;
       }
       const path = window.location.pathname.replace('/', '');
-      if (['products', 'puppies', 'about', 'guides', 'contact'].includes(path)) {
+      if (['products', 'categories', 'about', 'guides', 'contact'].includes(path)) {
         return path;
       }
     } catch {
@@ -35,12 +33,13 @@ function MainApp() {
   };
 
   const [currentTab, setCurrentTab] = useState<string>(getInitialTab);
+  const [selectedPetFilter, setSelectedPetFilter] = useState<string | undefined>(undefined);
 
-  // Sync tab with URL hash so back/forward works
+  // Sync tab with URL hash so browser back/forward works cleanly
   useEffect(() => {
     const handlePopState = () => {
       const hash = window.location.hash.replace('#', '');
-      if (['products', 'puppies', 'about', 'guides', 'contact', 'home'].includes(hash)) {
+      if (['products', 'categories', 'about', 'guides', 'contact', 'home'].includes(hash)) {
         setCurrentTab(hash);
       } else {
         setCurrentTab('home');
@@ -53,6 +52,7 @@ function MainApp() {
 
   const handleTabChange = (tab: string) => {
     setCurrentTab(tab);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     try {
       if (tab === 'home') {
         window.history.pushState(null, '', window.location.pathname);
@@ -64,14 +64,21 @@ function MainApp() {
     }
   };
 
-  // Dynamic Title for SEO
+  const handleNavigateWithFilter = (tab: string, petFilter?: string) => {
+    if (petFilter) {
+      setSelectedPetFilter(petFilter);
+    }
+    handleTabChange(tab);
+  };
+
+  // Dynamic Title for SEO & Browsing
   useEffect(() => {
     const titles: Record<string, string> = {
-      home: `${siteConfig.brandName} | Healthy Puppies & Pet Supplies in Thanesar`,
-      products: `Dog Food & Pet Products Price Catalog | ${siteConfig.brandName} Thanesar`,
-      puppies: `Available Puppies (German Shepherd, Labrador) | ${siteConfig.brandName} Kurukshetra`,
-      about: `About Our Ethical Kennel & Story | ${siteConfig.brandShortName} Kurukshetra`,
-      guides: `Pet Nutrition & Summer Care Guides | ${siteConfig.brandName} Haryana`,
+      home: `${siteConfig.brandName} | Authentic Pet Food & Pet Supplies in Thanesar`,
+      products: `Pet Food & Pet Products Price Catalog | ${siteConfig.brandName} Thanesar`,
+      categories: `Shop Pet Supplies by Animal (Dogs, Cats, Birds, Fish) | ${siteConfig.brandName}`,
+      about: `About Our Pet Store & Story | ${siteConfig.brandShortName} Kurukshetra`,
+      guides: `Pet Nutrition & Care Guides | ${siteConfig.brandName} Haryana`,
       contact: `Visit Our Store in Thanesar, Kurukshetra | Location & Hours`,
     };
     document.title = titles[currentTab] || titles.home;
@@ -84,9 +91,19 @@ function MainApp() {
 
       {/* Main Content Router */}
       <main className="flex-1">
-        {currentTab === 'home' && <HomeView onNavigateTab={handleTabChange} />}
-        {currentTab === 'products' && <ProductsView />}
-        {currentTab === 'puppies' && <PuppiesView onNavigateProducts={() => handleTabChange('products')} />}
+        {currentTab === 'home' && (
+          <HomeView onNavigateTab={handleNavigateWithFilter} />
+        )}
+        {currentTab === 'products' && (
+          <ProductsView initialPet={selectedPetFilter} />
+        )}
+        {currentTab === 'categories' && (
+          <CategoriesView
+            onSelectCategory={(petType) => {
+              handleNavigateWithFilter('products', petType);
+            }}
+          />
+        )}
         {currentTab === 'about' && <AboutView />}
         {currentTab === 'guides' && <GuidesView />}
         {currentTab === 'contact' && <ContactView />}

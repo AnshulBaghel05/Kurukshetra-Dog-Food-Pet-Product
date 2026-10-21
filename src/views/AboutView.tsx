@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, ShieldCheck, Users, Play, ExternalLink } from 'lucide-react';
+import { Heart, ShieldCheck, Users, Play, ExternalLink, Store, Sparkles, Truck } from 'lucide-react';
 import { siteConfig } from '../config/site';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -20,7 +20,7 @@ export const AboutView: React.FC = () => {
             {t.about.storyHeading}
           </h1>
           <p className="text-xs sm:text-sm text-[#5E696E] dark:text-[#A2ADB3]">
-            Kurukshetra, Haryana · Established to set higher welfare benchmarks for companion animals.
+            Thanesar, Kurukshetra · Dedicated to providing pure nutrition, genuine brand health products, and reliable supplies for all pets.
           </p>
         </div>
 
@@ -41,15 +41,15 @@ export const AboutView: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="aspect-16/10 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#14181A]/10 dark:border-[#F6EFE4]/10 shadow-md">
               <img
-                src="/images/about_kennel_kurukshetra.jpg"
-                alt="Kurukshetra ethical kennel grounds in Haryana"
+                src="/images/hero_pet_supplies_store.jpg"
+                alt="Kurukshetra Pet Food and Pet Supplies retail store shelves"
                 width={800}
                 height={500}
                 className="w-full h-full object-cover"
               />
             </div>
             <p className="text-[11px] text-[#5E696E] dark:text-[#A2ADB3] text-center mt-2">
-              Our open-air, shaded play runs in Kurukshetra surrounded by farmland.
+              Our store counter and organized pet food aisles in Thanesar, Kurukshetra.
             </p>
           </div>
         </div>
@@ -63,7 +63,7 @@ export const AboutView: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-4 rounded-xl bg-[#F6EFE4] dark:bg-[#14181A] border border-[#14181A]/5 dark:border-[#F6EFE4]/5 space-y-2">
               <div className="w-8 h-8 rounded-lg bg-[#B5533C]/10 flex items-center justify-center text-[#B5533C]">
-                <Heart className="w-4 h-4" />
+                <ShieldCheck className="w-4 h-4" />
               </div>
               <p className="text-xs sm:text-sm text-[#14181A] dark:text-[#F6EFE4] font-medium leading-relaxed">
                 {t.about.value1}
@@ -72,7 +72,7 @@ export const AboutView: React.FC = () => {
 
             <div className="p-4 rounded-xl bg-[#F6EFE4] dark:bg-[#14181A] border border-[#14181A]/5 dark:border-[#F6EFE4]/5 space-y-2">
               <div className="w-8 h-8 rounded-lg bg-[#1F3A2E]/10 flex items-center justify-center text-[#1F3A2E] dark:text-emerald-400">
-                <ShieldCheck className="w-4 h-4" />
+                <Truck className="w-4 h-4" />
               </div>
               <p className="text-xs sm:text-sm text-[#14181A] dark:text-[#F6EFE4] font-medium leading-relaxed">
                 {t.about.value2}
@@ -81,7 +81,7 @@ export const AboutView: React.FC = () => {
 
             <div className="p-4 rounded-xl bg-[#F6EFE4] dark:bg-[#14181A] border border-[#14181A]/5 dark:border-[#F6EFE4]/5 space-y-2">
               <div className="w-8 h-8 rounded-lg bg-[#E8A33D]/10 flex items-center justify-center text-[#E8A33D]">
-                <Users className="w-4 h-4" />
+                <Heart className="w-4 h-4" />
               </div>
               <p className="text-xs sm:text-sm text-[#14181A] dark:text-[#F6EFE4] font-medium leading-relaxed">
                 {t.about.value3}
@@ -117,8 +117,8 @@ export const AboutView: React.FC = () => {
             {!isPlayingVideo ? (
               <div className="relative w-full h-full cursor-pointer group" onClick={() => setIsPlayingVideo(true)}>
                 <img
-                  src="/images/about_kennel_kurukshetra.jpg"
-                  alt="Kennel video preview"
+                  src="/images/hero_pet_supplies_store.jpg"
+                  alt="Store video tour preview"
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -127,7 +127,7 @@ export const AboutView: React.FC = () => {
                   </div>
                 </div>
                 <div className="absolute bottom-4 left-4 bg-black/60 text-white text-xs px-3 py-1.5 rounded-lg backdrop-blur-xs">
-                  Tap to load Kennel Walkthrough Video
+                  Tap to watch store walkthrough video
                 </div>
               </div>
             ) : (

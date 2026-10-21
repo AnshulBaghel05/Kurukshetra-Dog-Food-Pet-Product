@@ -20,68 +20,68 @@ export const guidesData: GuideArticle[] = [
     excerptHindi: "कुरुक्षेत्र के पेट पैरेंट्स के लिए प्रोटीन स्तर, सूखा बनाम गीला खाना और नमी से बचाव का व्यावहारिक गाइड।",
     date: "2026-10-15",
     readTime: "5 min read",
-    category: "Nutrition Guide",
+    category: "Dog Nutrition",
     disclaimer: "General guidance only. Not veterinary advice. Individual dogs have unique caloric and metabolic requirements.",
     content: [
       "Choosing the right dog food in Thanesar requires balancing three key factors: your dog's activity level, their breed size (e.g. large German Shepherds vs toy Pomeranians), and the distinct seasonal extremes of Haryana—blistering dry summers, high monsoon humidity, and chilly winter months.",
       "1. Check the First Three Ingredients: The first ingredient should always be a named animal protein (like deboned chicken, lamb meal, or whole eggs), not unidentified grain cereals or wheat gluten fillers.",
       "2. Storage in Haryana Weather: During Kurukshetra's humid July-September months, kibble stored improperly can absorb moisture and develop harmful molds. Always store dry food in its original bag sealed inside an airtight food-grade plastic or steel container away from direct sunlight.",
       "3. Local Water & Hydration: Kurukshetra water can have high mineral content in certain sectors. Always provide filtered, fresh drinking water and ensure your dog drinks adequately when eating dry kibble.",
-      "Need personalized advice for your dog? Bring your pet or message our Thanesar store on WhatsApp with their age, weight, and current diet."
+      "Need personalized advice for your dog? Message our Thanesar store on WhatsApp with their age, weight, and current diet for a customized recommendation."
     ]
   },
   {
-    "slug": "german-shepherd-puppy-care-haryana-summers",
-    title: "German Shepherd Puppy Care Guide for Haryana Summers (May to July)",
-    titleHindi: "हरियाणा की गर्मियों में जर्मन शेफर्ड पिल्लों की देखभाल (मई से जुलाई तक)",
-    excerpt: "Essential cooling strategies, hydration tips, and exercise schedules for double-coat and long-coat GSDs in North India.",
-    excerptHindi: "उत्तर भारत में डबल-कोट और लॉन्ग-कोट जर्मन शेफर्ड के लिए कूलिंग टिप्स और वॉक का सही समय।",
-    date: "2026-10-10",
+    slug: "cat-nutrition-wet-vs-dry-hydration-guide",
+    title: "Cat Nutrition in India: Balancing Dry Kibble & Wet Pouches for Urinary Health",
+    titleHindi: "बिल्लियों का सही पोषण: यूरिनरी हेल्थ के लिए सूखा खाना और गीले पाउच का संतुलन",
+    excerpt: "Why cats naturally drink very little water and how pairing quality kibble with wet gravy pouches prevents common feline kidney problems.",
+    excerptHindi: "बिल्लियां कम पानी क्यों पीती हैं और सूखा व गीला खाना मिलाकर खिलाना क्यों जरूरी है।",
+    date: "2026-10-12",
+    readTime: "5 min read",
+    category: "Cat Care",
+    disclaimer: "Educational information for pet parents. Always consult a veterinarian if your cat exhibits straining or changes in urination.",
+    content: [
+      "Felines evolved as desert predators, deriving the majority of their hydration directly from prey. Consequently, domestic cats have an inherently low thirst drive and often do not drink enough standing bowl water.",
+      "1. The Risk of Dry-Only Diets: Feeding cats 100% dry kibble without sufficient moisture intake concentrates their urine, which can lead to painful feline lower urinary tract disease (FLUTD) and kidney strain over time.",
+      "2. The Gravy Pouch Solution: Incorporate at least one wet gravy pouch (such as Whiskas Ocean Fish gravy or Sheba Chicken/Tuna fillet) daily into their meal routine. Wet food contains approximately 75-82% moisture, keeping their urinary tract naturally flushed.",
+      "3. Ceramic & Stainless Steel Bowls: Cats dislike their whiskers touching narrow plastic bowl edges ('whisker fatigue'). Use wide, shallow stainless steel or ceramic saucers placed away from their litter tray.",
+      "Visit our Kurukshetra store or order fresh Whiskas and Sheba multipacks with fast same-day local delivery."
+    ]
+  },
+  {
+    slug: "caring-for-pets-haryana-summers",
+    title: "Caring for Dogs in Haryana Summers: Heat Protection, Coat Care & Hydration",
+    titleHindi: "हरियाणा की गर्मियों में कुत्तों की देखभाल: गर्मी से बचाव, कोट केयर और खानपान",
+    excerpt: "Essential cooling strategies, paw protection on hot tarmac, and summer feeding adjustments for double-coated breeds in North India.",
+    excerptHindi: "उत्तर भारत की 42°C+ गर्मी में कुत्तों के लिए वॉक का सही समय, पंजे की सुरक्षा और हल्के भोजन के सुझाव।",
+    date: "2026-10-05",
     readTime: "6 min read",
-    category: "Breed Care",
-    disclaimer: "General welfare recommendations. For symptoms of heat exhaustion, seek immediate emergency veterinary assistance.",
+    category: "Seasonal Wellness",
+    disclaimer: "General welfare recommendations. For symptoms of heat exhaustion (excessive panting, glassed eyes, vomiting), seek immediate veterinary care.",
     content: [
-      "German Shepherds—especially long-coat varieties—possess a dense double coat originally bred for European herding. When temperatures in Thanesar and Pipli cross 42°C in May and June, special protocols are essential.",
-      "1. Never Shave a Double Coat: Shaving your German Shepherd removes their natural thermal insulation and leaves their sensitive skin exposed to sunburn and insect bites. Regular deshedding with an undercoat rake is far safer and more effective.",
-      "2. Walking Schedule: Walk exclusively before 6:30 AM or after 8:00 PM. Check the road surface with the back of your hand: if the asphalt is too hot for 7 seconds, it will burn your puppy's sensitive paw pads.",
-      "3. Electrolytes & Chilled Treats: Offer fresh room-temperature or lightly chilled water. Ice-block chew treats infused with bone broth or curd (dahi) provide engaging cooling relief indoors.",
-      "4. Shaded Kennel Management: At our Kurukshetra kennel, all runs are heavily shaded with mature neem trees, fans, and misting lines to maintain healthy airflow."
+      "When temperatures in Thanesar and Pipli cross 42°C in May and June, companion dogs need thoughtful adjustments to their routine, exercise, and diet.",
+      "1. Never Shave a Double Coat: Shaving dogs like German Shepherds, Golden Retrievers, or Pomeranians removes their natural thermal insulation barrier and exposes vulnerable skin to sunburn, heatstroke, and insect bites. Regular deshedding with an undercoat rake is vastly superior.",
+      "2. Asphalt Check & Walking Schedule: Walk exclusively before 6:30 AM or after 8:00 PM. Test the road with the back of your hand: if the asphalt feels too hot after 7 seconds, it will burn your dog's sensitive paw pads.",
+      "3. Summer Diet Adjustments: Appetite frequently dips during high heat. Feed during the coolest morning and night hours. Light additions like curd (dahi), bone broth ice pops, or watermelon slices (seeds removed) provide soothing hydration.",
+      "4. Tick & Flea Prevention: Haryana's summer and monsoon months see a spike in ticks. Use herbal anti-tick shampoos and veterinarian-approved spot-on treatments regularly."
     ]
   },
   {
-    "slug": "puppy-vaccination-schedule-india-overview",
-    title: "Puppy Vaccination Schedule in India: A Clear Overview for New Owners",
-    titleHindi: "भारत में पिल्लों का टीकाकरण शेड्यूल: नए पेट पैरेंट्स के लिए पूरी जानकारी",
-    excerpt: "Understanding the essential 7-in-1, Rabies, and kennel cough timing from 6 weeks to 16 weeks of age.",
-    excerptHindi: "6 सप्ताह से 16 सप्ताह की उम्र तक 7-इन-1 और एंटी-रेबीज टीकों का सटीक समय और महत्व।",
-    date: "2026-09-28",
-    readTime: "7 min read",
-    category: "Pet Health",
-    disclaimer: "General educational information. Your licensed veterinarian will prescribe the exact vaccine brand, timing, and booster schedule.",
-    content: [
-      "Welcoming a new puppy into your home in Kurukshetra is a joyful milestone, but infectious diseases such as Canine Parvovirus and Distemper are prevalent in the environment. Timely vaccination is life-saving.",
-      "6 to 8 Weeks: First Primary 6-in-1 or 7-in-1 DHPPiL vaccine (Distemper, Hepatitis, Parvovirus, Parainfluenza, Leptospirosis). Puppies should have completed their first deworming rounds prior to this injection.",
-      "10 to 12 Weeks: Booster 7-in-1 dose plus optional Canine Coronavirus vaccine depending on your veterinarian's protocol.",
-      "14 to 16 Weeks: Final puppy combination booster plus the first Anti-Rabies Vaccine (ARV).",
-      "Crucial Socialization Rule: Keep your puppy strictly inside your home premises and do not allow them on public streets or parks in Thanesar until 14 days after their final booster has established protective immunity."
-    ]
-  },
-  {
-    "slug": "dog-food-price-guide-kurukshetra",
-    title: "Dog Food Price Guide Kurukshetra: Budget vs Premium Nutrition Costs",
-    titleHindi: "कुरुक्षेत्र डॉग फ़ूड मूल्य गाइड: बजट और प्रीमियम ब्रांड्स का खर्च विश्लेषण",
-    excerpt: "Monthly feeding cost breakdown for small, medium, and large dogs in Haryana with honest cost-per-day analysis.",
-    excerptHindi: "हरियाणा में छोटे, मध्यम और बड़े कुत्तों के लिए प्रति माह और प्रति दिन भोजन खर्च का पारदर्शी विवरण।",
-    date: "2026-09-18",
+    slug: "aquarium-fish-care-water-feeding-guide",
+    title: "Beginner's Guide to Aquarium Fish: Feeding Schedules & Water Conditioning",
+    titleHindi: "एक्वेरियम और रंगीन मछलियों की देखभाल: सही दाना और पानी साफ़ रखने का तरीका",
+    excerpt: "How to avoid overfeeding tropical fish, maintaining proper dissolved oxygen, and treating Kurukshetra tap water for healthy aquariums.",
+    excerptHindi: "मछलियों को ज़रूरत से ज़्यादा खाना खिलाने से कैसे बचें और पानी का संतुलन कैसे बनाए रखें।",
+    date: "2026-09-22",
     readTime: "4 min read",
-    category: "Cost & Budget",
-    disclaimer: "Price estimates based on standard retail guidelines in Haryana. Exact prices vary by bag size and supplier offers.",
+    category: "Aquarium Care",
+    disclaimer: "General hobbyist guide. Water parameters vary based on specific freshwater or planted community tank species.",
     content: [
-      "Many first-time pet buyers in Kurukshetra ask: 'How much does it actually cost per month to feed a German Shepherd or Labrador properly?'",
-      "Economy Segment: Standard commercial brands provide basic nutrition at approximately ₹150 to ₹250 per kilogram. A 30 kg adult Labrador consumes roughly 12 to 14 kg monthly, equating to roughly ₹2,000 - ₹3,200 per month.",
-      "Super-Premium & Grain-Free: Formulas like Royal Canin, Drools Focus, or Farmina range from ₹400 to ₹750+ per kg. While the bag price is higher, these formulas are more nutrient-dense, requiring smaller daily cup measurements (meaning less waste and better nutrient absorption).",
-      "Home-Cooked Supplementation: Mixing quality kibble with boiled chicken, plain curd, carrots, and boiled pumpkin can balance costs while keeping meals palatable.",
-      "At our Thanesar counter, we offer genuine advice based on your real monthly budget—never upselling unnecessary supplements."
+      "Keeping healthy, colorful tropical fish in Kurukshetra is rewarding, but the #1 mistake new aquarium keepers make is overfeeding and poor water conditioning.",
+      "1. The 2-Minute Feeding Rule: Fish stomachs are tiny—roughly the size of their eye. Feed only what your fish can completely consume within 2 minutes once or twice daily. Uneaten flakes sink to the bottom, rot, and cause dangerous ammonia spikes.",
+      "2. Tap Water Chlorine Treatment: Municipal water in Haryana contains chlorine that is toxic to delicate fish gills. Always treat new water with an aquarium water conditioner or dechlorinator before adding it to the tank.",
+      "3. Partial Water Changes: Never replace 100% of your aquarium water at once, as this destroys beneficial nitrifying bacteria. Perform a gentle 20-25% partial water change every 10 to 14 days.",
+      "We stock Aqua-Vital tropical flakes, spirulina granules, water conditioners, and sponge filters at our Thanesar retail counter."
     ]
   }
 ];

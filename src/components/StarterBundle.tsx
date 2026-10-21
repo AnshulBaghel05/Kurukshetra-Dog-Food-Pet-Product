@@ -7,7 +7,7 @@ export const StarterBundle: React.FC = () => {
   const { t } = useLanguage();
 
   const bundleWhatsAppUrl = buildWhatsAppUrl(
-    "Namaste HR Pets! I am interested in the *New Puppy Parent Starter Kit* bundle. My puppy is a [Breed / Age]. Could you please share the pricing and items available?"
+    "Namaste Kurukshetra Pet Store! I am interested in ordering the *New Pet Parent Starter Essentials Kit*. My pet is a [Species / Breed / Age]. Could you please share the tailored price and items available for delivery?"
   );
 
   return (
@@ -63,8 +63,8 @@ export const StarterBundle: React.FC = () => {
             <div className="lg:col-span-5 relative">
               <div className="aspect-4/3 rounded-2xl overflow-hidden border border-[#14181A]/10 dark:border-[#F6EFE4]/10 shadow-lg">
                 <img
-                  src="/images/dog_food_bag_premium.jpg"
-                  alt="Starter puppy nutrition bundle"
+                  src="/images/products/dog_orthopedic_bed.jpg"
+                  alt="Pet starter care essentials bundle"
                   width={600}
                   height={450}
                   loading="lazy"

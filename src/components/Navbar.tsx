@@ -26,7 +26,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
   const navItems = [
     { id: 'home', label: t.nav.home },
     { id: 'products', label: t.nav.products },
-    { id: 'puppies', label: t.nav.puppies },
+    { id: 'categories', label: t.nav.categories },
     { id: 'about', label: t.nav.about },
     { id: 'guides', label: t.nav.guides },
     { id: 'contact', label: t.nav.contact },

@@ -1,33 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, ShoppingBag, ShieldCheck, Award, HeartHandshake, Star } from 'lucide-react';
+import { MessageCircle, ShoppingBag, ShieldCheck, Award, HeartHandshake, Star, PackageCheck, Truck } from 'lucide-react';
 import { siteConfig } from '../config/site';
 import { useLanguage } from '../context/LanguageContext';
 import { buildWhatsAppUrl } from '../utils/whatsapp';
 
 interface HeroProps {
   onNavigateProducts: () => void;
-  onNavigatePuppies: () => void;
+  onNavigateCategories: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onNavigateProducts }) => {
+export const Hero: React.FC<HeroProps> = ({ onNavigateProducts, onNavigateCategories }) => {
   const { t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroImages = [
     {
-      src: "/images/hero_kurukshetra_pet_store.jpg",
-      alt: "German Shepherd puppy and Labrador resting on woven charpai cot in Haryana",
-      caption: "Ethical Kennels & Open Runs · Kurukshetra, Haryana"
+      src: "/images/hero_pet_supplies_store.jpg",
+      alt: "Kurukshetra Pet Food & Pet Supplies store shelves stocked with food and accessories",
+      caption: "Authorized Pet Nutrition & Supplies Store · Thanesar, Kurukshetra"
     },
     {
-      src: "/images/puppy_german_shepherd.jpg",
-      alt: "Long coat German Shepherd puppy on warm terracotta linen",
-      caption: "Healthy German Shepherd Puppies with Verified Lineage"
+      src: "/images/products/dog_food_bag_premium.jpg",
+      alt: "Premium dog food kibble and healthy nutrition",
+      caption: "Royal Canin, Farmina N&D, Drools & Veterinary Supplements"
     },
     {
-      src: "/images/puppy_labrador_golden.jpg",
-      alt: "Playful Golden Labrador retriever puppy",
-      caption: "Family-Socialized Labradors & Wholesome Pet Care"
+      src: "/images/products/cat_whiskas_ocean_fish.jpg",
+      alt: "Whiskas ocean fish dry cat food with crunchy kibble",
+      caption: "Whiskas, Sheba Wet Pouches & Odor-Lock Cat Litter"
     }
   ];
 
@@ -39,7 +39,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateProducts }) => {
   }, [heroImages.length]);
 
   const whatsappHeroUrl = buildWhatsAppUrl(
-    "Namaste HR Pets! I found your website and would like to enquire about puppies / dog food in Thanesar, Kurukshetra."
+    "Namaste Kurukshetra Pet Store! I found your website and would like to order pet food / supplies with delivery in Thanesar."
   );
 
   return (
@@ -49,13 +49,12 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateProducts }) => {
           
           {/* Left Column: Text & Intent */}
           <div className="lg:col-span-7 space-y-6">
-            {/* Location & Brand Pill Alternative: Unboxed clean typographic kicker */}
             <div className="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#B5533C]">
               <span>Thanesar</span>
               <span aria-hidden="true">·</span>
               <span>Kurukshetra, Haryana</span>
               <span aria-hidden="true">·</span>
-              <span>@kurukshetrakennel</span>
+              <span>100% Genuine Pet Care</span>
             </div>
 
             <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#14181A] dark:text-[#F6EFE4] leading-[1.15] text-balance">
@@ -87,15 +86,15 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateProducts }) => {
               </button>
             </div>
 
-            {/* Micro-guarantee */}
+            {/* Micro-guarantees */}
             <div className="flex items-center gap-4 text-xs text-[#5E696E] dark:text-[#A2ADB3] pt-1">
               <div className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-[#1F3A2E] dark:text-emerald-400" />
-                <span>In-Person Kennel Visits Welcomed</span>
+                <span>100% Genuine Distributor Stock</span>
               </div>
               <span aria-hidden="true">·</span>
               <div className="flex items-center gap-1.5">
-                <HeartHandshake className="w-4 h-4 text-[#B5533C]" />
+                <Truck className="w-4 h-4 text-[#B5533C]" />
                 <span>Same-Day Local Delivery</span>
               </div>
             </div>
@@ -119,10 +118,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateProducts }) => {
                     loading={index === 0 ? 'eager' : 'lazy'}
                     className="w-full h-full object-cover"
                   />
-                  {/* Subtle contrast gradient scrim */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
                   
-                  {/* Image caption */}
                   <div className="absolute bottom-4 left-4 right-4 text-white text-xs sm:text-sm font-medium drop-shadow-xs">
                     {img.caption}
                   </div>
@@ -152,43 +149,43 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateProducts }) => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
-                <Award className="w-5 h-5 text-[#B5533C]" />
+                <PackageCheck className="w-5 h-5 text-[#B5533C]" />
                 <span className="text-xl sm:text-2xl font-bold font-heading text-[#14181A] dark:text-[#F6EFE4] tabular-nums">
-                  {siteConfig.trustMetrics.yearsInBusiness}
+                  {siteConfig.trustMetrics.productsCount}
                 </span>
               </div>
               <p className="text-xs text-[#5E696E] dark:text-[#A2ADB3]">
-                {t.hero.trustYears}
+                {t.hero.trustProducts}
               </p>
             </div>
 
             <div className="space-y-1">
               <div className="flex items-center gap-2">
-                <HeartHandshake className="w-5 h-5 text-[#1F3A2E] dark:text-emerald-400" />
+                <Truck className="w-5 h-5 text-[#1F3A2E] dark:text-emerald-400" />
                 <span className="text-xl sm:text-2xl font-bold font-heading text-[#14181A] dark:text-[#F6EFE4] tabular-nums">
-                  {siteConfig.trustMetrics.puppiesHomed}
+                  {siteConfig.trustMetrics.ordersDelivered}
                 </span>
               </div>
               <p className="text-xs text-[#5E696E] dark:text-[#A2ADB3]">
-                {t.hero.trustPups}
+                {t.hero.trustDelivered}
               </p>
             </div>
 
             <div className="space-y-1">
               <div className="flex items-center gap-2">
-                <Star className="w-5 h-5 text-[#E8A33D]" />
+                <ShieldCheck className="w-5 h-5 text-[#E8A33D]" />
                 <span className="text-xl sm:text-2xl font-bold font-heading text-[#14181A] dark:text-[#F6EFE4] tabular-nums">
-                  {siteConfig.trustMetrics.instagramFollowers}
+                  {siteConfig.trustMetrics.genuineGuarantee}
                 </span>
               </div>
               <p className="text-xs text-[#5E696E] dark:text-[#A2ADB3]">
-                {t.hero.trustFollowers} ({siteConfig.instagramHandle})
+                {t.hero.trustGenuine}
               </p>
             </div>
 
             <div className="space-y-1">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-[#B5533C]" />
+                <Star className="w-5 h-5 text-[#B5533C]" />
                 <span className="text-xl sm:text-2xl font-bold font-heading text-[#14181A] dark:text-[#F6EFE4] tabular-nums">
                   {siteConfig.trustMetrics.googleRating}
                 </span>

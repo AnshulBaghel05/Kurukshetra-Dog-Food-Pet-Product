@@ -63,8 +63,8 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentTab }) => {
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNav('puppies')} className="hover:text-white transition-colors cursor-pointer">
-                  {t.nav.puppies}
+                <button onClick={() => handleNav('categories')} className="hover:text-white transition-colors cursor-pointer">
+                  {t.nav.categories}
                 </button>
               </li>
               <li>
@@ -91,7 +91,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentTab }) => {
               Community & Social
             </h3>
             <p className="text-xs text-[#A2ADB3]">
-              Follow our daily kennel updates, dog training tips, and live puppy videos.
+              Follow our daily product unboxings, fresh stock arrivals, and pet care tips.
             </p>
             <div className="flex items-center gap-2 pt-1">
               <a

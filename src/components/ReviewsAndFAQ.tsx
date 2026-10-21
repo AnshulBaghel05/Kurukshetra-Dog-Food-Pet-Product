@@ -10,59 +10,59 @@ export const ReviewsAndFAQ: React.FC = () => {
     {
       name: "Sandeep Malik",
       location: "Sector 7, Kurukshetra",
-      pet: "Long-Coat German Shepherd Owner",
+      pet: "Golden Retriever Pet Parent",
       quote:
-        "Visited their kennel in person before reserving our GSD puppy. The owner let us spend time with both mother and father dogs. Clean open spaces and very honest feeding advice for Haryana summers.",
+        "Finally, a trusted store in Kurukshetra that keeps genuine Royal Canin and Farmina N&D in stock with fresh expiry dates. I order on WhatsApp and receive it at my door within 2 hours.",
       verified: true
     },
     {
       name: "Gurpreet Singh",
       location: "Pipli Road, Thanesar",
-      pet: "Golden Labrador Owner",
+      pet: "2 Cats & Indie Dog Parent",
       quote:
-        "Got our Labrador puppy and their starter food kit last year. Whenever I need Royal Canin or calcium supplements, I message them on WhatsApp and get it delivered in Thanesar within 2 hours.",
+        "The best store in Thanesar for Whiskas, Sheba wet pouches, and bentonite cat litter. The staff knows pet nutrition well and never pushes expired or overpriced products.",
       verified: true
     },
     {
       name: "Dr. Ananya Sharma",
       location: "Near Birla Mandir, Kurukshetra",
-      pet: "Beagle & Indie Pet Parent",
+      pet: "Aquarium & Cockatiel Enthusiast",
       quote:
-        "Honest store counter. They won't push unnecessary expensive brands if your dog is doing well on a balanced diet. Appreciate their transparent guidance.",
+        "Finding clean bird seeds and quality tropical fish flakes used to be difficult in Kurukshetra. Their Aviary's Finest seed mix and Aqua-Vital flakes are always clean and fresh.",
       verified: true
     }
   ];
 
   const faqs = [
     {
-      q: "Can I visit your kennel in Kurukshetra before deciding on a puppy?",
-      qHi: "क्या पिल्ला लेने से पहले मैं कुरुक्षेत्र में आपके केनेल का दौरा कर सकता हूँ?",
-      a: "Yes, we strongly encourage in-person visits! You can meet the puppy, observe their mother's temperament, and inspect the shaded, hygienic open kennel runs. Please message us on WhatsApp or call ahead so we can ensure the kennel manager is available to assist you.",
-      aHi: "हाँ, हम व्यक्तिगत विज़िट को प्राथमिकता देते हैं! आप पिल्ले से मिल सकते हैं, मां के स्वभाव को देख सकते हैं और केनेल की स्वच्छता जांच सकते हैं। कृपया पहले व्हाट्सएप या फोन पर समय तय कर लें।"
+      q: "Do you offer same-day home delivery in Thanesar and Kurukshetra?",
+      qHi: "क्या आप थानेसर और कुरुक्षेत्र में उसी दिन होम डिलीवरी करते हैं?",
+      a: "Yes! We offer same-day doorstep delivery across Thanesar, Pipli Road, University Campus, and nearby residential sectors. Simply add your required pet food or accessories to the cart and submit your order via WhatsApp.",
+      aHi: "हाँ! हम थानेसर, पिपली रोड, यूनिवर्सिटी कैंपस और आसपास के सभी सेक्टरों में उसी दिन होम डिलीवरी उपलब्ध कराते हैं। आप कार्ट से सीधे व्हाट्सएप पर ऑर्डर भेज सकते हैं।"
     },
     {
-      q: "Are the puppies vaccinated and dewormed?",
-      qHi: "क्या पिल्लों को टीका (Vaccination) और डिवॉर्मिंग दी गई है?",
-      a: "All puppies receive age-appropriate deworming cycles (starting at 4 weeks) and their primary core vaccination (such as 6-in-1 or 7-in-1 DHPPiL) administered and signed by a licensed local veterinary surgeon with an official health card.",
-      aHi: "सभी पिल्लों को उम्र अनुसार डिवॉर्मिंग और प्राथमिक वैक्सीन (6-in-1 / 7-in-1) अधिकृत पशु चिकित्सक द्वारा लगाकर आधिकारिक कार्ड दिया जाता है।"
+      q: "Are the pet food brands 100% genuine with verified batch seals?",
+      qHi: "क्या सभी पेट फ़ूड ब्रांड्स 100% असली और सीलबंद हैं?",
+      a: "Absolutely. We are authorized retail partners for leading veterinary and commercial brands including Royal Canin, Farmina N&D, Drools Focus, Whiskas, Sheba, Himalaya, and Beaphar. All items have tamper-evident manufacturer seals and verifiable expiration dates.",
+      aHi: "बिल्कुल। हम रॉयल कैनिन, फारमिना, ड्रूल्स, व्हिस्कस और हिमालया के अधिकृत रिटेलर हैं। सभी बैग्स सीलबंद और ताज़ा एक्सपायरी डेट के साथ आते हैं।"
     },
     {
-      q: "Do you offer home delivery for dog food in Thanesar?",
-      qHi: "क्या आप थानेसर में डॉग फ़ूड की होम डिलीवरी करते हैं?",
-      a: "Yes! We provide same-day local delivery across Thanesar, Pipli, University Campus, and nearby sectors in Kurukshetra for qualifying orders. Simply add products to your enquiry or message your list directly on WhatsApp.",
-      aHi: "हाँ! हम थानेसर, पिपली, विश्वविद्यालय परिसर और आसपास के सेक्टरों में उसी दिन होम डिलीवरी उपलब्ध कराते हैं।"
+      q: "What pet supplies do you carry for cats, birds, and fish?",
+      qHi: "बिल्लियों, पक्षियों और मछलियों के लिए क्या सामान उपलब्ध है?",
+      a: "In addition to dog nutrition, we stock Whiskas dry cat food, Sheba wet gravy pouches, clumping odor-lock cat litter, gourmet bird seed mixes for budgies and parrots, and high-protein spirulina fish food flakes for clean aquarium water.",
+      aHi: "कुत्तों के भोजन के अलावा हमारे पास कैट फ़ूड, शेबा ग्रेवी पाउच, क्लंपिंग लिटर, पक्षियों का शुद्ध दाना और एक्वेरियम मछलियों के फ्लेक्स उपलब्ध हैं।"
     },
     {
-      q: "Why are some prices listed as 'Ask on WhatsApp'?",
-      qHi: "कुछ उत्पादों की कीमत 'Ask on WhatsApp' क्यों लिखी है?",
-      a: "Distributor pack prices and seasonal offers fluctuate, and live puppy availability varies weekly. To ensure you never receive outdated or incorrect pricing, we confirm exact batch prices and bag sizes directly on WhatsApp.",
-      aHi: "सप्लाई और स्टॉक की ताज़ा स्थिति के अनुसार सटीक और पारदर्शी मूल्य सुनिश्चित करने के लिए हम व्हाट्सएप पर तुरंत सही कीमत बताते हैं।"
+      q: "How do I place an order through WhatsApp?",
+      qHi: "व्हाट्सएप के माध्यम से ऑर्डर कैसे दें?",
+      a: "Browse our Products catalog, choose your quantity, and click 'Add to Cart'. Open your Cart drawer, choose Home Delivery or Store Pickup, type your name/area, and tap 'Place Order on WhatsApp'. Our team will instantly confirm availability and dispatch your order.",
+      aHi: "उत्पाद देखकर 'कार्ट में जोड़ें' पर क्लिक करें। कार्ट खोलकर डिलीवरी का तरीका और पता लिखें, फिर 'व्हाट्सएप पर ऑर्डर भेजें' दबाएं। हम तुरंत ऑर्डर कन्फर्म करेंगे।"
     },
     {
-      q: "Which dog food brands do you carry in stock?",
-      qHi: "आपकी दुकान में कौन से प्रमुख ब्रांड्स उपलब्ध हैं?",
-      a: "We stock leading brands including Royal Canin (Maxi Puppy, Medium Adult, Giant), Drools Focus Super Premium, Farmina N&D Grain-Free, Pedigree PRO, Himalaya Healthy Pet, and specialized grooming & anti-tick products.",
-      aHi: "हमारे पास रॉयल कैनिन, ड्रूल्स फोकस, फारमिना ग्रेन-फ्री, पेडिग्री प्रो, हिमालया और एंटी-टिक शैम्पू व सप्लीमेंट्स का ताज़ा स्टॉक रहता है।"
+      q: "Can I get personalized advice on what food is best for my pet's breed?",
+      qHi: "क्या मुझे अपने पेट की नस्ल के अनुसार सही भोजन की सलाह मिल सकती है?",
+      a: "Yes! Use our interactive 'Find the Right Food for Your Pet' quiz on this website, or message us directly on WhatsApp with your pet's age, breed, and current diet. We provide honest recommendations tailored to Haryana's seasonal weather.",
+      aHi: "हाँ! हमारी वेबसाइट पर फूड क्विज़ का उपयोग करें या सीधे व्हाट्सएप पर अपने पेट की उम्र व नस्ल बताएं। हम उचित पोषण की सलाह देंगे।"
     }
   ];
 
@@ -74,10 +74,10 @@ export const ReviewsAndFAQ: React.FC = () => {
         <div>
           <div className="text-center max-w-xl mx-auto mb-10">
             <span className="text-xs font-bold uppercase tracking-wider text-[#B5533C]">
-              Local Community Trust
+              Verified Pet Parent Reviews
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#14181A] dark:text-[#F6EFE4] mt-1">
-              Words from Pet Families in Kurukshetra
+              Trusted by Pet Families Across Kurukshetra
             </h2>
           </div>
 

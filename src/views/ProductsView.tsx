@@ -8,7 +8,11 @@ import rawProducts from '../data/products.json';
 
 const products = rawProducts as ProductItem[];
 
-export const ProductsView: React.FC = () => {
+interface ProductsViewProps {
+  initialPet?: string;
+}
+
+export const ProductsView: React.FC<ProductsViewProps> = ({ initialPet }) => {
   const { t } = useLanguage();
   const { addItem, items: cartItems } = useCart();
 
@@ -23,12 +27,18 @@ export const ProductsView: React.FC = () => {
   };
 
   const [searchQuery, setSearchQuery] = useState(() => getInitialParam('q', ''));
-  const [selectedPet, setSelectedPet] = useState(() => getInitialParam('pet', 'all'));
+  const [selectedPet, setSelectedPet] = useState(() => initialPet || getInitialParam('pet', 'all'));
   const [selectedCategory, setSelectedCategory] = useState(() => getInitialParam('cat', 'all'));
   const [selectedStage, setSelectedStage] = useState(() => getInitialParam('stage', 'all'));
   const [selectedBrand, setSelectedBrand] = useState(() => getInitialParam('brand', 'all'));
   const [inStockOnly, setInStockOnly] = useState(() => getInitialParam('stock', 'false') === 'true');
   const [activeModalProduct, setActiveModalProduct] = useState<ProductItem | null>(null);
+
+  useEffect(() => {
+    if (initialPet && initialPet !== selectedPet) {
+      setSelectedPet(initialPet);
+    }
+  }, [initialPet]);
 
   // Sync to URL
   useEffect(() => {
@@ -181,8 +191,11 @@ export const ProductsView: React.FC = () => {
                 className="w-full text-xs py-2 px-2.5 rounded-lg bg-[#F6EFE4] dark:bg-[#14181A] border border-[#14181A]/10 dark:border-[#F6EFE4]/10 focus:outline-hidden focus:border-[#B5533C] cursor-pointer"
               >
                 <option value="all">{t.products.all}</option>
-                <option value="dog">Dog / Puppy</option>
-                <option value="cat">Cat</option>
+                <option value="dog">Dog & Puppy</option>
+                <option value="cat">Cat & Kitten</option>
+                <option value="bird">Birds</option>
+                <option value="fish">Fish & Aquarium</option>
+                <option value="small-pet">Small Pets & Rabbits</option>
               </select>
             </div>
 
@@ -315,12 +328,19 @@ export const ProductsView: React.FC = () => {
                       </p>
 
                       <div className="pt-2 flex items-center justify-between">
-                        <div className="text-sm font-bold text-[#14181A] dark:text-[#F6EFE4]">
-                          {p.price !== null ? (
-                            <span>₹{p.price}</span>
-                          ) : (
-                            <span className="text-xs font-semibold text-[#1F3A2E] dark:text-emerald-400">
-                              {t.products.askPrice}
+                        <div className="flex items-baseline gap-2">
+                          <div className="text-sm font-bold text-[#14181A] dark:text-[#F6EFE4]">
+                            {p.price !== null ? (
+                              <span>₹{p.price}</span>
+                            ) : (
+                              <span className="text-xs font-semibold text-[#1F3A2E] dark:text-emerald-400">
+                                {t.products.askPrice}
+                              </span>
+                            )}
+                          </div>
+                          {p.mrp && p.price && p.mrp > p.price && (
+                            <span className="text-[11px] text-[#5E696E] dark:text-[#A2ADB3] line-through">
+                              ₹{p.mrp}
                             </span>
                           )}
                         </div>

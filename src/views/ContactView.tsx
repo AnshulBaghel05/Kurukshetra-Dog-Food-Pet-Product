@@ -11,23 +11,23 @@ export const ContactView: React.FC = () => {
 
   // Form state
   const [name, setName] = useState('');
-  const [interest, setInterest] = useState<'food' | 'puppy' | 'advice'>('food');
+  const [interest, setInterest] = useState<'food' | 'accessories' | 'advice'>('food');
   const [message, setMessage] = useState('');
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const interestLabel =
       interest === 'food'
-        ? 'Dog Food & Accessories'
-        : interest === 'puppy'
-        ? 'Puppy Availability & Lineage'
-        : 'Dietary Guidance & Summer Care';
+        ? 'Pet Food & Nutrition'
+        : interest === 'accessories'
+        ? 'Accessories & Grooming'
+        : 'Dietary Guidance & Advice';
 
-    let text = `*Namaste HR Pets!* 🐾\nNew enquiry from website:\n- *Name:* ${name || 'Prospective Pet Parent'}\n- *Interest:* ${interestLabel}`;
+    let text = `*Namaste HR Pets Store!* 🐾\nNew enquiry from website:\n- *Name:* ${name || 'Customer'}\n- *Interest:* ${interestLabel}`;
     if (message.trim()) {
       text += `\n- *Message:* ${message.trim()}`;
     }
-    text += `\n\nCould you please help me with this? Thank you!`;
+    text += `\n\nCould you please help me with pricing and delivery in Kurukshetra? Thank you!`;
 
     const url = buildWhatsAppUrl(text);
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -151,7 +151,7 @@ export const ContactView: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                     {[
                       { id: 'food', label: t.contact.interestFood },
-                      { id: 'puppy', label: t.contact.interestPuppy },
+                      { id: 'accessories', label: t.contact.interestAccessories },
                       { id: 'advice', label: t.contact.interestAdvice },
                     ].map((opt) => (
                       <button

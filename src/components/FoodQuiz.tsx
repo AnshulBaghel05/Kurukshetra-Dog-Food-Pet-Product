@@ -12,7 +12,7 @@ export const FoodQuiz: React.FC = () => {
   const [step, setStep] = useState(1);
   const [answers, setAnswers] = useState({
     petType: 'dog',
-    lifeStage: 'puppy',
+    lifeStage: 'adult',
     size: 'large',
     need: 'general',
   });
@@ -44,15 +44,15 @@ export const FoodQuiz: React.FC = () => {
 
   // Find 2-3 matching products
   const matchingProducts = productsData.filter((p) => {
-    if (answers.petType === 'cat') {
-      return p.petType === 'cat';
-    }
+    if (answers.petType === 'bird') return p.petType === 'bird';
+    if (answers.petType === 'fish') return p.petType === 'fish';
+    if (answers.petType === 'cat') return p.petType === 'cat';
     const matchesStage = p.lifeStage === answers.lifeStage || p.category === 'treats';
     return p.petType === 'dog' && matchesStage;
   }).slice(0, 3);
 
   const generateQuizWhatsAppUrl = () => {
-    const text = `*Namaste HR Pets!* 🐾\nI took your 'Which Food is Right for My Dog' quiz on your website:\n- Pet: ${answers.petType}\n- Life Stage: ${answers.lifeStage}\n- Size: ${answers.size}\n- Nutritional Focus: ${answers.need}\n\nCould you please suggest the best in-stock food and daily feeding quantity at your Thanesar store?`;
+    const text = `*Namaste Kurukshetra Pet Store!* 🐾\nI took your 'Find the Right Food for Your Pet' nutrition quiz on your website:\n- Pet: ${answers.petType}\n- Life Stage: ${answers.lifeStage}\n- Breed / Size: ${answers.size}\n- Nutritional Focus: ${answers.need}\n\nCould you please suggest the best in-stock food and pack sizes available at your Thanesar store?`;
     return buildWhatsAppUrl(text);
   };
 
@@ -124,6 +124,30 @@ export const FoodQuiz: React.FC = () => {
                     >
                       <span>{t.quiz.options.petCat}</span>
                       {answers.petType === 'cat' && <CheckCircle2 className="w-5 h-5 text-[#B5533C]" />}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleSelect('petType', 'bird')}
+                      className={`p-4 rounded-xl text-left border cursor-pointer min-h-[48px] flex items-center justify-between transition-colors ${
+                        answers.petType === 'bird'
+                          ? 'border-[#B5533C] bg-white dark:bg-[#14181A] shadow-xs ring-2 ring-[#B5533C]/20 font-bold'
+                          : 'border-[#14181A]/10 dark:border-[#F6EFE4]/10 bg-white/60 dark:bg-[#14181A]/60'
+                      }`}
+                    >
+                      <span>{t.quiz.options.petBird}</span>
+                      {answers.petType === 'bird' && <CheckCircle2 className="w-5 h-5 text-[#B5533C]" />}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleSelect('petType', 'fish')}
+                      className={`p-4 rounded-xl text-left border cursor-pointer min-h-[48px] flex items-center justify-between transition-colors ${
+                        answers.petType === 'fish'
+                          ? 'border-[#B5533C] bg-white dark:bg-[#14181A] shadow-xs ring-2 ring-[#B5533C]/20 font-bold'
+                          : 'border-[#14181A]/10 dark:border-[#F6EFE4]/10 bg-white/60 dark:bg-[#14181A]/60'
+                      }`}
+                    >
+                      <span>{t.quiz.options.petFish}</span>
+                      {answers.petType === 'fish' && <CheckCircle2 className="w-5 h-5 text-[#B5533C]" />}
                     </button>
                   </div>
                 </div>
@@ -278,6 +302,9 @@ export const FoodQuiz: React.FC = () => {
                       <p className="text-[11px] text-[#5E696E] dark:text-[#A2ADB3] mt-0.5">
                         {p.brand} · {p.packSize}
                       </p>
+                      <p className="text-xs font-bold text-[#B5533C] mt-1">
+                        ₹{p.price}
+                      </p>
                     </div>
 
                     <button
@@ -292,7 +319,7 @@ export const FoodQuiz: React.FC = () => {
                       }
                       className="mt-3 w-full py-2 px-3 rounded-lg bg-[#F6EFE4] dark:bg-[#252D30] hover:bg-[#B5533C] hover:text-white text-xs font-semibold transition-colors cursor-pointer min-h-[40px]"
                     >
-                      Add to Enquiry
+                      {t.products.addToEnquiry}
                     </button>
                   </div>
                 ))}

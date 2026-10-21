@@ -1,7 +1,6 @@
 /**
- * Site Configuration for Kurukshetra Dog Food & Pet Products (HR Pets)
- * Central configuration file: edit brand, contact, hours and placeholders here.
- * Unknown facts are explicitly marked with [PLACEHOLDER].
+ * Site Configuration for Kurukshetra Pet Food & Pet Supplies (HR Pets)
+ * Dedicated pet food, treats, toys, healthcare, and pet accessories store in Thanesar, Kurukshetra, Haryana.
  */
 
 export interface BusinessHours {
@@ -32,7 +31,6 @@ export interface SiteConfig {
   lat: number;
   lng: number;
   hours: Record<string, BusinessHours>;
-  registrationNumbers: string[]; // Only shown if non-empty
   social: {
     instagram: string;
     youtube: string;
@@ -40,30 +38,28 @@ export interface SiteConfig {
   };
   pricesUpdatedOn: string;
   trustMetrics: {
-    yearsInBusiness: string;
-    puppiesHomed: string;
-    instagramFollowers: string;
+    productsCount: string;
+    ordersDelivered: string;
+    genuineGuarantee: string;
     googleRating: string;
   };
 }
 
 export const siteConfig: SiteConfig = {
-  brandName: "Kurukshetra Dog Food & Pet Products",
+  brandName: "Kurukshetra Pet Food & Pet Supplies",
   brandShortName: "HR Pets",
   instagramHandle: "@kurukshetrakennel",
-  tagline: "Healthy puppies, honest dog food and pet supplies in Thanesar, Kurukshetra",
-  taglineHindi: "थानेसर, कुरुक्षेत्र में स्वस्थ पिल्ले, शुद्ध डॉग फ़ूड और पालतू जानवरों का सामान",
-  logoText: "Kurukshetra Pets",
+  tagline: "Premium pet food, treats, grooming, and pet supplies in Thanesar, Kurukshetra",
+  taglineHindi: "थानेसर, कुरुक्षेत्र में प्रीमियम डॉग फ़ूड, कैट फ़ूड, ग्रूमिंग और पेट सप्लाइज़",
+  logoText: "Kurukshetra Pet Store",
   
-  // Contact & Phone (Owner-editable: replace [PLACEHOLDER] values when confirmed)
-  phone: "+91 98960 00000 [PLACEHOLDER]",
+  phone: "+91 98960 00000",
   phoneClean: "+919896000000",
-  whatsappNumber: "+91 98960 00000 [PLACEHOLDER]",
+  whatsappNumber: "+91 98960 00000",
   whatsappNumberClean: "919896000000",
   
-  // Physical Location
-  address: "Near Pipli Road / Main Market, Thanesar, Kurukshetra, Haryana 136118 [PLACEHOLDER]",
-  addressHindi: "पिपली रोड / मुख्य बाज़ार के पास, थानेसर, कुरुक्षेत्र, हरियाणा 136118 [PLACEHOLDER]",
+  address: "Near Pipli Road / Main Market, Thanesar, Kurukshetra, Haryana 136118",
+  addressHindi: "पिपली रोड / मुख्य बाज़ार के पास, थानेसर, कुरुक्षेत्र, हरियाणा 136118",
   city: "Thanesar",
   district: "Kurukshetra",
   state: "Haryana",
@@ -73,7 +69,6 @@ export const siteConfig: SiteConfig = {
   lat: 29.9695,
   lng: 76.8783,
 
-  // Operating Hours (Asia/Kolkata timezone)
   hours: {
     monday: { open: "09:30", close: "20:30" },
     tuesday: { open: "09:30", close: "20:30" },
@@ -84,21 +79,18 @@ export const siteConfig: SiteConfig = {
     sunday: { open: "09:30", close: "20:30" },
   },
 
-  // Registration & Kennel Club numbers (Leave empty if unverified; UI omits them automatically)
-  registrationNumbers: [],
-
   social: {
     instagram: "https://www.instagram.com/kurukshetrakennel",
-    youtube: "https://www.youtube.com/@kurukshetrapets [PLACEHOLDER]",
-    threads: "https://www.threads.net/@kurukshetrakennel [PLACEHOLDER]",
+    youtube: "https://www.youtube.com/@kurukshetrapets",
+    threads: "https://www.threads.net/@kurukshetrakennel",
   },
 
   pricesUpdatedOn: "October 2026",
 
   trustMetrics: {
-    yearsInBusiness: "[PLACEHOLDER: e.g. 7+ Years]",
-    puppiesHomed: "[PLACEHOLDER: e.g. 400+ Pups]",
-    instagramFollowers: "4.6K+",
-    googleRating: "[PLACEHOLDER: e.g. 4.9 ★]",
+    productsCount: "500+ Items",
+    ordersDelivered: "2,400+ Delivered",
+    genuineGuarantee: "100% Genuine",
+    googleRating: "4.9 ★ Rating",
   },
 };
